@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://chez.mario.fr/commande"
+    xmlns:cmd="http://chez.mario.fr/commande"
+    xmlns:piz="http://chez.mario.fr/pizza"
+    xmlns:clt="http://chez.mario.fr/client"
+    elementFormDefault="qualified">
+ 
+        <xsd:import namespace="http://ujf-grenoble.fr/pizza"  schemaLocation="pizza.xsd"/>
+        <xsd:import namespace="http://ujf-grenoble.fr/client" schemaLocation="client.xsd"/>
+ 
+<xsd:element name="commande" type="cmd:Commande"/>
+
+<xsd:complexType name="Commande">
+    <xsd:sequence>
+        <xsd:element name="numéro" type="integer"/> 
+        <xsd:element name="date" type="Date"/>
+        <xsd:element name="client" type="clt:Client"/> 
+        <xsd:element name="pizza" type="piz:Pizza" minOccurs="1"/> 
+    </xsd:sequence>
+</xsd:complexType>
+
+<xsd:simpleType name="Date">
+    <xsd:restriction base="xsd:string">
+        <xsd:pattern value="[0-9]{4}-[01][0-9]-[0-3][0-9]-[0-2][0-9]:[0-5][0-9]"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+</xsd:schema>

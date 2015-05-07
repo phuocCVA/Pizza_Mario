@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://pizzeria.mario.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://pizzeria.mario.com/">
+
+<xs:element name="Transformer" type="tns:Transformer"/>
+
+<xs:element name="TransformerResponse" type="tns:TransformerResponse"/>
+
+<xs:element name="addCommande" type="tns:addCommande"/>
+
+<xs:element name="addCommandeResponse" type="tns:addCommandeResponse"/>
+
+<xs:element name="getClientFromOrder" type="tns:getClientFromOrder"/>
+
+<xs:element name="getClientFromOrderResponse" type="tns:getClientFromOrderResponse"/>
+
+<xs:complexType name="Transformer">
+<xs:sequence>
+<xs:element name="xml" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TransformerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCommande">
+<xs:sequence>
+<xs:element name="filename" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCommandeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClientFromOrder">
+<xs:sequence>
+<xs:element name="numeroOrder" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClientFromOrderResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

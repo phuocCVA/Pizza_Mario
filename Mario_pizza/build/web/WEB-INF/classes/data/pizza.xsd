@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xsd:schema version="1.0"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://chez.mario.fr/pizza"
+           xmlns="http://chez.mario.fr/pizza"
+           elementFormDefault="qualified">
+
+ <xsd:element name="pizza" type="Pizza"/>
+ 
+ <xsd:complexType name="Pizza">
+     <xsd:sequence>
+         <xsd:element name="base" type="Base"/>
+         <xsd:element name="ingrédients" type="Ingrédients"/>
+         <xsd:element name="taille" type="Taille"/>
+     </xsd:sequence>
+ </xsd:complexType>
+ 
+ <xsd:simpleType name="Taille">
+     <xsd:restriction base="xsd:string">
+         <xsd:pattern value="\d [M,L,XL]"/>
+     </xsd:restriction>
+ </xsd:simpleType>
+ 
+ <xsd:simpleType name="Base">
+     <xsd:restriction base="xsd:string">
+         <xsd:enumeration value="Creme"/>
+         <xsd:enumeration value="Tomate"/>
+     </xsd:restriction>
+ </xsd:simpleType>
+ 
+ <xsd:complexType name="ingrédient">
+     <xsd:sequence>
+         <xsd:element name="ingrédient" type="Ingrédient" minOccurs="3" maxOccurs="6"/>
+     </xsd:sequence>
+ </xsd:complexType>
+         
+ <xsd:simpleType name="Ingrédient">
+     <xsd:restriction base="xsd:string">
+         <xsd:enumeration value="jambon"/>
+         <xsd:enumeration value="saumon"/>
+         <xsd:enumeration value="thon"/>
+         <xsd:enumeration value="poulet"/>
+         <xsd:enumeration value="mozza"/>
+         <xsd:enumeration value="chèvre"/>
+         <xsd:enumeration value="roquefort"/>
+         <xsd:enumeration value="gruyère"/>
+         <xsd:enumeration value="champignons"/>
+         <xsd:enumeration value="poivrons"/>
+         <xsd:enumeration value="aubergine"/>
+         <xsd:enumeration value="ananas"/>          
+     </xsd:restriction>
+ </xsd:simpleType>
+ 
+</xsd:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<ns1:pizza
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://chez.mario.fr/pizza'
+    xsi:schemaLocation='http://chez.mario.fr/pizza pizza.xsd'>
+    <ns1:base>Tomate</ns1:base>
+    <ns1:ingrédients>3</ns1:ingrédients>
+    <ns1:taille>M</ns1:taille>
+
+</ns1:pizza>

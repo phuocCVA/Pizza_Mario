@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<ns1:client
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://chez.mario.fr/client'
+    xsi:schemaLocation='http://chez.mario.fr/client client.xsd'>
+    <ns1:nom>NGUYEN</ns1:nom>
+    <ns1:prénom>Huu Phuoc</ns1:prénom>
+    <ns1:téléphone>0781654618</ns1:téléphone>
+    <ns1:adresse>8 rue Pierre Courtade</ns1:adresse>
+</ns1:client>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+        <title>COMMANDE</title>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" type="text/css" href="Style.css"/>
+    </head>
+    <body>
+        <div id="wrapper"> 
+             <img src="image/pizza.jpg" alt="pizza"/>
+        </div>
+        
+        <div id="wrapper">
+                <ul class="menu">
+                      <li><a href="Accueil.xhtml" ><span>Accueil</span></a>  </li>
+                      <li><a href="Webmasters.xhtml" ><span>Web Masters</span></a>  </li>
+                      <li><a href="Commande.xhtml" ><span>Passer une commande</span></a>  </li>
+                      <li><a href="Livrer.xhtml" ><span>Livrer une commande</span></a>  </li> 
+                      <li><a href="Expliquer.xhtml" ><span>Expliquer</span></a>  </li>
+                </ul>
+        </div>
+        
+        <div id="wrapper">
+            <div id="body">
+             <form name="form1" method="post" action="NewServlet">  
+                 <table style="width:100%">   
+                 <tr>
+                     <td>
+                        <fieldset style="width:650px">
+                            <legend>Commande </legend>
+                            <br/>
+                            <label>Base: </label>
+                                   <input type="radio" name="base" value="Tomate"/>Tomate
+                                   <input type="radio" name="base" value="Crème"/>Crème
+                            <br/><br/>
+
+                            <label> Choisir la taille </label>
+                               <select name="taille">
+                                   <option value="M" selected="selected">M(1 à 2 personnes)</option>
+                                   <option value="L">L(3 à 4 personnes)</option>
+                                   <option value="XL">XL(plus de 4 personnes)</option>
+                               </select> 
+                            <br/><br/>       
+
+                            <label for="nom">Ingrédients : </label> <br/><br/>
+                            <table style="width:650px">
+                                <tr>
+                                    <td> <label> Végétariennes</label> </td>
+                                    <td><img id="image" src="image/aubergine.jpg" alt="Aubergines"/></td>
+                                    <td><img id="image" src="image/ananas.jpg" alt="Ananas"/></td>
+                                    <td><img id="image" src="image/champignons.jpg" alt="Champignons"/></td>
+                                    <td><img id="image" src="image/poivrons.jpg" alt="Poivrons"/></td> 
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td> <input type="checkbox" name="ingredients1" value="aubergine"/>Aubergine</td>
+                                    <td> <input type="checkbox" name="ingredients2" value="ananas"/>Ananas</td>
+                                    <td> <input type="checkbox" name="ingredients3" value="champignons"/>Champignon</td>
+                                    <td> <input type="checkbox" name="ingredients4" value="poivron"/>Poivron</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td> <label> Fromagères</label> </td>
+                                    <td><img id="image" src="image/roquefort.jpg" alt="Roquefort"/></td>
+                                    <td><img id="image" src="image/gruyère.jpg" alt="gruyere"/></td> 
+                                    <td><img id="image" src="image/mozzarella.jpg" alt="mozzarella"/></td> 
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td> <input type="checkbox" name="ingredients5" value="roquefort"/>roquefort</td>
+                                    <td> <input type="checkbox" name="ingredients6" value="gruyere"/>Gruyere</td>
+                                    <td> <input type="checkbox" name="ingredients7" value="mozzarella"/>Mozzarella</td>   
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td> <label> Hyperprotéinées</label> </td>
+                                    <td><img id="image" src="image/poulet.jpg" alt="poulet"/></td>
+                                    <td><img id="image" src="image/chèvre.jpg" alt="chevre"/></td>
+                                    <td><img id="image" src="image/jambon.jpg" alt="jambon"/></td>
+                                    <td><img id="image" src="image/saumon.jpg" alt="saumon"/></td> 
+                                    <td><img id="image" src="image/thon.jpg" alt="thon"/></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td> <input type="checkbox" name="ingredients8" value="poulet"/>Poulet</td>
+                                    <td> <input type="checkbox" name="ingredients9" value="chevre"/>Chevre</td>
+                                    <td> <input type="checkbox" name="ingredients10" value="jambon"/>Jambon</td>
+                                    <td> <input type="checkbox" name="ingredients11" value="saumon"/>Saumon</td>
+                                    <td> <input type="checkbox" name="ingredients12" value="thon"/>Thon</td>
+                                </tr>
+                            </table>  
+                            <br/><br/>
+                        </fieldset>
+                     </td>
+                     
+                     <td style="valign:top">
+                        <fieldset style= "width:300px;text-align:right;">
+                            <legend>Informations Personnele </legend>
+                            <label for="nom">Nom            : </label> <input type="text" name="nom" id="nom" size="20"/> <br/>
+                            <label for="prenom">Prénom         : </label> <input type="text" name="prenom" id="prenom" size="20"/> <br/>
+                            <label for="telephone">Téléphone      : </label> <input type="text" name="telephone" id="telephone" size="20"/> <br/>
+                            <label for="adresse">Adresse        : </label> <input type="text" name="adresse" id="adresse" size="20"/> <br/>
+                            <label for="noAdherent">Numéro Adhérent: </label> <input type="text" name="noAdherent" id="noAdherent" size="20"/> <br/>         
+                        </fieldset>
+                     </td>
+                 </tr>
+                <tr>
+                    <td colspan="2"> 
+                    <center>
+                          <input type="submit" value="Valider"/>    
+                       </center>   
+                    </td>
+                </tr>    
+             </table>     
+            </form>  
+  
+            </div>
+        </div>
+                  
+    </body>
+</html>

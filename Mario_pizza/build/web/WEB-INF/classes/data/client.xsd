@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://chez.mario.fr/client"
+    xmlns="http://chez.mario.fr/client"
+    elementFormDefault="qualified">
+ 
+        <xsd:element name="client" type="Client"/>
+        
+        <xsd:complexType name="Client">
+            <xsd:sequence>
+                <xsd:element name="nom"         type="xsd:string"/>
+                <xsd:element name="prénom"      type="xsd:string"/>
+                <xsd:element name="téléphone"   type="Tel"/>
+                <xsd:element name="adresse"     type="Adresse"/>
+            </xsd:sequence>
+            <xsd:attribute use="optional" name="noAdherent" type="NoAdherent"/>
+        </xsd:complexType>
+ 
+        <xsd:simpleType name="Tel">
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="(\d\d ){5}"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+ 
+        <xsd:simpleType name="Adresse">
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="\d\d\d (chemin|avenue|rue) ([a-z]|\s)*, \d\d\d\d\d [A-Z]*"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+        
+        <xsd:simpleType name="NoAdherent">
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="000-\d\d\d"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<ns1:commande
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://chez.mario.fr/commande'
+    xmlns:ns2='http://chez.mario.fr/client'
+    xmlns:ns3='http://chez.mario.fr/pizza'
+    xsi:schemaLocation='http://chez.mario.fr/commande commande.xsd'>
+    <ns1:numéro>123</ns1:numéro>
+    <ns1:date>2013-12-11-19:20</ns1:date>
+    <ns1:client noAdherent="123">
+        <ns2:nom>NGUYEN</ns2:nom>
+        <ns2:prénom>Huu Phuoc</ns2:prénom>
+        <ns2:téléphone>0781654618</ns2:téléphone>
+        <ns2:adresse>8 rue Pierre Courtade</ns2:adresse>
+    </ns1:client>
+    <ns1:pizza>
+        <ns3:base>Tomate</ns3:base>
+        <ns3:ingrédients>3</ns3:ingrédients>
+        <ns3:taille>M</ns3:taille>
+    </ns1:pizza>
+</ns1:commande>
